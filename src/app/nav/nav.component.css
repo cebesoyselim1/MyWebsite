@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
+
+.navbar{
+    width: 100%;
+    background-color: #002966;
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.95;
+}
+
+.navbar .navbar-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-inner .navbar-brand{
+    font-size: 4rem;
+    color: white;
+}
+
+.navbar-inner .navbar-toggler{
+    display: none;
+}
+
+.navbar-inner .navbar-nav-red{
+    background-color: #000536;
+    opacity: 0.95;
+}
+
+.navbar-nav-red .navbar-nav-green{
+    background-color: #00154d;
+    opacity: 0.95;
+    height: 95%;
+} 
+
+.navbar-nav-green .navbar-nav-blue{
+    background-color: #002966;
+    opacity: 0.95;
+    height: 95%;
+}
+
+.navbar-nav-blue .navbar-nav{
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-nav .nav-item{
+    width: 8rem;
+}
+
+.nav-item .nav-link{
+    display: block;
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.nav-item .nav-link:hover{
+    background-color: #000536;
+}
+
+@media screen and (max-width:768px){
+
+    /* Toggler Button */
+
+    .navbar-inner .navbar-toggler{
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 3rem;
+        transform: translateY(-50%);
+    }
+    
+    .navbar-toggler{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    
+    .navbar-toggler .toggler{
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        transition: transform 0.5s;
+    }
+    
+    .navbar-toggler .toggler1{
+        top: calc(50% - 14.5px);
+        transform-origin: left;
+    }
+
+    .navbar-toggler .toggler2{
+        transition: transform 0.5s, opacity 0.5s;
+    }
+    
+    .navbar-toggler .toggler3{
+        top: calc(50% + 14.5px);
+        transform-origin: left;
+    }
+    
+    .navbar-toggler.active .toggler1{
+        transform: rotateZ(45deg);
+    }
+    
+    .navbar-toggler.active .toggler2{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    
+    
+    .navbar-toggler.active .toggler3{
+        transform: rotateZ(-45deg);
+    }
+
+    /* Navbar Links */
+
+    .navbar-nav-red{
+        height: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: 0;
+        transition: height 0.5s;
+        transition-delay: 0.4s;
+    }
+
+    .navbar-nav-red.active{
+        height: 380px;
+        transition-delay: 0.1s;
+
+    }
+
+    .navbar-nav-red.active .navbar-nav-green{
+        height: 350px;
+        transition-delay: 0.2s;
+    }
+
+    .navbar-nav-red .navbar-nav-green{
+        transition: height 0.5s;
+        transition-delay: 0.2s;
+        height: 0;
+    }
+
+    .navbar-nav-red.active .navbar-nav-blue{
+        height: 320px;
+        transition-delay: 0.4s;
+    }
+
+    .navbar-nav-red .navbar-nav-blue{
+        transition: height 0.5s;
+        transition-delay: 0.1s;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .navbar-nav-red .navbar-nav{
+        flex-direction: column;
+    }
+
+    .navbar-nav .nav-item{
+        width: 100%;
+    }
+
+    .nav-item .nav-link{
+        display: block;
+        text-align: left;
+        font-size: 1.6rem;
+        padding-left: 2rem;
+        transition: background-color 0.3s;
+    }
+
+    .nav-item .nav-link:hover{
+        background-color: #00021F;
+    }
+    
+}
+
+
+
+
+
+
