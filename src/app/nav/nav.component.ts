@@ -20,7 +20,7 @@ export class NavComponent implements OnInit {
     this.initBrandAnim();
     setInterval(() => {
       this.initBrandAnim();
-    },this.knowledges.length * this.timer)
+    },this.knowledges.length * this.timer + 100)
   }
 
   toggleActive(toggler:any, navbarLinks:any){

@@ -9,6 +9,7 @@
     left: 0;
     right: 0;
     opacity: 0.95;
+    z-index: 500;
 }
 
 .navbar .navbar-inner{
@@ -19,7 +20,7 @@
 }
 
 .navbar-inner .navbar-brand{
-    font-size: 4rem;
+    font-size: 3rem;
     color: white;
 }
 
@@ -56,16 +57,17 @@
 .nav-item .nav-link{
     display: block;
     width: 100%;
-    padding: 2rem 0;
+    padding: 1rem 0;
     text-align: center;
     font-size: 1.5rem;
     color: white;
     background-color: transparent;
+    border-radius: 20px;
     transition: background-color 0.3s;
 }
 
 .nav-item .nav-link:hover{
-    background-color: #000536;
+    background-color: #DC143C;
 }
 
 @media screen and (max-width:768px){
@@ -73,17 +75,13 @@
     /* Toggler Button */
 
     .navbar-inner .navbar-toggler{
+        width: 30px;
+        height: 30px;
         display: block;
         position: absolute;
         top: 50%;
         right: 3rem;
         transform: translateY(-50%);
-    }
-    
-    .navbar-toggler{
-        position: relative;
-        width: 40px;
-        height: 40px;
         background-color: transparent;
         border: none;
         outline: none;
@@ -92,7 +90,7 @@
     
     .navbar-toggler .toggler{
         width: 100%;
-        height: 4px;
+        height: 2px;
         background-color: #fff;
         position: absolute;
         top: 50%;
@@ -102,7 +100,7 @@
     }
     
     .navbar-toggler .toggler1{
-        top: calc(50% - 14.5px);
+        top: calc(50% - 10.9px);
         transform-origin: left;
     }
 
@@ -111,7 +109,7 @@
     }
     
     .navbar-toggler .toggler3{
-        top: calc(50% + 14.5px);
+        top: calc(50% + 10.9px);
         transform-origin: left;
     }
     
@@ -143,13 +141,13 @@
     }
 
     .navbar-nav-red.active{
-        height: 380px;
+        height: 310px;
         transition-delay: 0.1s;
 
     }
 
     .navbar-nav-red.active .navbar-nav-green{
-        height: 350px;
+        height: 280px;
         transition-delay: 0.2s;
     }
 
@@ -160,7 +158,7 @@
     }
 
     .navbar-nav-red.active .navbar-nav-blue{
-        height: 320px;
+        height: 250px;
         transition-delay: 0.4s;
     }
 
@@ -184,11 +182,12 @@
         text-align: left;
         font-size: 1.6rem;
         padding-left: 2rem;
+        border-radius: 0;
         transition: background-color 0.3s;
     }
 
     .nav-item .nav-link:hover{
-        background-color: #00021F;
+        background-color: #DC143C;
     }
     
 }
